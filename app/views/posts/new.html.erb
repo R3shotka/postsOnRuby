@@ -1,11 +1,12 @@
 <% content_for :title, "New post" %>
 
-<h1>New post</h1>
+<section class="form-page">
+  <div class="form-intro">
+    <%= link_to "Назад до блогу", posts_path, class: "back-link" %>
+    <p class="eyebrow">New article</p>
+    <h1>Створити пост</h1>
+    <p>Додайте заголовок і текст, а сторінка блогу автоматично оформить запис у загальній сітці.</p>
+  </div>
 
-<%= render "form", post: @post %>
-
-<br>
-
-<div>
-  <%= link_to "Back to posts", posts_path %>
-</div>
+  <%= render "form", post: @post %>
+</section>

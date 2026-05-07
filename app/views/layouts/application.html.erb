@@ -22,7 +22,9 @@
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="<%= content_for(:body_class) || "blog-app" %>">
+    <main class="site-shell">
+      <%= yield %>
+    </main>
   </body>
 </html>
